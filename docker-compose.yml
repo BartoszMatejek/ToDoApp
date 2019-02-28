@@ -8,6 +8,8 @@ services:
       SPRING_DATASOURCE_URL: 'jdbc:postgresql://db:5432/todoapp'
       SPRING_DATASOURCE_USERNAME: 'todoapp'
       SPRING_DATASOURCE_PASSWORD: 'todoapp'
+    ports:
+      - 9090:9090
   db:
     image: postgres:10-alpine
     environment:
