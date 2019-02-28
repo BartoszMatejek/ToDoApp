@@ -1,0 +1,16 @@
+version: '3'
+services:
+  todoapp:
+    build: ./
+    image: todoapp:0.0.1
+    environment:
+      SERVER_PORT: 9090
+      SPRING_DATASOURCE_URL: 'jdbc:postgresql://db:5432/todoapp'
+      SPRING_DATASOURCE_USERNAME: 'todoapp'
+      SPRING_DATASOURCE_PASSWORD: 'todoapp'
+  db:
+    image: postgres:10-alpine
+    environment:
+      POSTGRES_DB: 'todoapp'
+      POSTGRES_USER: 'todoapp'
+      POSTGRES_PASSWORD: 'todoapp'
