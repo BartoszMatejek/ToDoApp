@@ -9,7 +9,7 @@ services:
       SPRING_DATASOURCE_USERNAME: 'todoapp'
       SPRING_DATASOURCE_PASSWORD: 'todoapp'
     ports:
-      - 9090:9090
+      - 127.0.0.1:9090:9090
   db:
     image: postgres:10-alpine
     environment:
